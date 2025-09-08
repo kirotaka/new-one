@@ -11,6 +11,6 @@ public class immutable {
                             System.out.println(userinput.charAt(0));               // First letter
                             System.out.println(userinput.charAt(userinput.length() - 1));   //LAST LETTER
                                      System.out.println(userinput.substring(1,6));      //2nd character and the 5th string
+       scanner.close();
     }
-
 }
