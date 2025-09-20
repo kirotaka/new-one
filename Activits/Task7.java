@@ -13,8 +13,9 @@ public class Task7 {
         System.out.println("Quotient: " + calc.hatiin(nm1, nm2));
         sc.close();
     }
-
-static class Calculator {
+ }
+ // 4 basic arithmetic method
+ class Calculator {
     int plus(int a, int b) {
         return a + b;
     }
@@ -27,5 +28,5 @@ static class Calculator {
     int hatiin(int a, int b) {
         return a / b;
     }
- }
+
 }
