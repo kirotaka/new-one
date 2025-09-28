@@ -39,8 +39,14 @@ class Gorilla implements Animal {
   Random random = new Random();
 
     public boolean feed (boolean timeToEat) {
-        System.out.println("put gorilla food into cage or die!");
-        return true;
+        if (timeToEat) {
+            System.out.println("put gorilla food into cage ");
+            return true;
+        }
+        else {
+            System.out.println("The gorilla eats you alive");
+        return false;
+        }
     }
 
     public void  groom () {
