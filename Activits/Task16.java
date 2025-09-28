@@ -57,11 +57,9 @@ class Gorilla implements Animal {
         System.out.println("pet at your own risk");
     }
     public void secret() {
-        int rNumber, iNumber;
-        rNumber = random.nextInt(3) + 1; // random number between 1 and 3
+        int rNumber = random.nextInt(3) + 1;
+        int iNumber;
         String input;
-        int number = -1;
-        boolean valid = false;
         // Door ASCII art arrays
         String[] door1 = {
             "-----------------------------------",
@@ -114,32 +112,20 @@ class Gorilla implements Animal {
             ""
         };
         // Print all doors side by side before input
-        for (int i = 0; i < door1.length; i++) {
+        for (int i = 0; i < door1.length; i++)
             System.out.println(door1[i] + "    " + door2[i] + "    " + door3[i]);
-        }
         do {
             System.out.print("Enter a number to enter a door (1, 2, or 3): ");
             input = scanner.nextLine();
-            if (input.matches("[1-3]")) {
-                number = Integer.parseInt(input);
-                valid = true;
-            } else {
-                System.out.println("Invalid input. Please enter only 1, 2, or 3.");
-            }
-        } while (!valid);
-        iNumber = number;
+        } while (!input.matches("[1-3]"));
+        iNumber = Integer.parseInt(input);
         System.out.println("You chose door: " + iNumber);
-        if (iNumber == rNumber) {
-            System.out.println("You entered a room with 100 Gorillas fight or die!");
-        } else {
-            System.out.println("You woke up from a dream");
-        }
+        System.out.println(iNumber == rNumber ? "You entered a room with 100 Gorillas fight or die!" : "You woke up from a dream");
         // Print only the selected door
         System.out.println();
-        String[] selectedDoor = (iNumber == 1) ? door1 : (iNumber == 2) ? door2 : door3;
-        for (String line : selectedDoor) {
+        String[] selectedDoor = iNumber == 1 ? door1 : iNumber == 2 ? door2 : door3;
+        for (String line : selectedDoor)
             System.out.println(line);
-        }
     }
 
 }
