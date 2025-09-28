@@ -126,7 +126,7 @@ class Gorilla implements Animal {
         if (iNumber == rNumber) {
             System.out.println("You entered a room with 100 Gorillas fight or die!");
         } else {
-            System.out.println("You wake up from a dream");
+            System.out.println("You woke up from a dream");
         }
         // Print only the selected door
         System.out.println();
