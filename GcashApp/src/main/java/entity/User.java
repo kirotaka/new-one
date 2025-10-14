@@ -1,4 +1,4 @@
-package ivan.gcashapp.UserService;
+package entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -11,7 +11,7 @@ import lombok.*;
 @Builder
 @Entity
 @Table(name = "users")
-public class Registration {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
